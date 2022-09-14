@@ -1,20 +1,12 @@
-$(".owl-carousel").owlCarousel({
-  loop: true,
-  margin: 20,
-  nav: true,
-  loop: true,
-  autoplay: true,
-  autoplayTimeout: 6000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
+let nav = document.querySelector(".nav-bar");
+let arrow = document.querySelector(".nav-bar .arrow");
+let taps = document.querySelectorAll(".nav-bar h3")
+// let nav = document.querySelector('.nav-bar')
+// let nav = document.querySelector('.nav-bar')
+
+arrow.onclick = () => {
+  nav.classList.toggle("active");
+  
+};
+
+// how to loop by forEach ?

@@ -353,8 +353,6 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   text-decoration: none ;
-  transition: 0.5s ease-in-out;
-  overflow-x: clip;
   text-transform: capitalize;
 
 }
