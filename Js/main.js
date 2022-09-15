@@ -29,6 +29,6 @@ over.onclick =function(){
   over.style.display = "none";
   remin.style.display = "none";
 }
-}, 5000)
+}, 10000)
 
 

@@ -1,9 +1,11 @@
+body{
+  background-image: linear-gradient(to bottom , #EFDCD6, #7cadd1);
+}
 *{
   font-family: 'Cairo', sans-serif;
-
 }
 p{
-  color: rgb(165, 165, 165);
+  color: rgb(39, 87, 46);
   
 }
 h3{
@@ -105,3 +107,9 @@ margin-left: 15px;
   background-color: #30808a;
   border-radius: 100px;
 } 
+.mem-container:hover{
+  transform: translateY(-10px);
+}
+.mem-container{
+  transition: 0.5s;
+}
