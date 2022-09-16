@@ -50,3 +50,17 @@ top:0;
   background-color: #30808a;
   border-radius: 100px;
 } 
+.container{
+  width: 800px;
+  margin: 20px auto;
+}
+.doctor {
+  width: 500px;
+  position: relative;
+}
+/* .doctor::after{
+  content: "Read this -";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+} */
