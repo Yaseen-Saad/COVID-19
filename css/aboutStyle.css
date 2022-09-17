@@ -1,50 +1,7 @@
-*{
-  font-family: 'Cairo', sans-serif;
 
-}
 p{
   color: rgb(165, 165, 165);
-  
 }
-h3{
-  font-weight: 900;
-    color: white;
-
-}
-h2{
-  font-weight: 900;
-  color: #504B5E;
-  /* text-align: center; */
-}
-h4{
-  font-weight: 700;
-}
-.tit-cont span {
-  color: rgb(209, 209, 209);
-}
-.tit-cont{
-  position: relative;
-  width: 800px;
-  margin: 20px auto;
-  left: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-/* left: 500px; */
-margin-top: 20px !important;
-/* padding: 20px; */
-padding: 0 20px;
-top:0;
-
-}
-.tit-cont img {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 150px;
-  /* display: inline; */
-}
-
 
 .container{
   position: relative;
@@ -56,12 +13,8 @@ top:0;
   width: 600px;
   margin: 100px auto;
   display: grid;
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); 
  gap:40px;
-  /* grid-template-columns: repeat(auto-fill , calc(600px / 2)); */
 }
 .container .mem-container span{
 display: block;
@@ -72,9 +25,7 @@ display: block;
 
 }
 .container .mem-container{
-  /* width: 300px; */
   border-radius: 10px;
-/* padding: 15px; */
 background-color: white;
 box-shadow:0px 12px 20px 0px rgb(0 0 0 / 13%) ,
 0px 2px 4px 0px rgb(0 0 0 / 12%);
@@ -84,7 +35,6 @@ overflow: hidden;
 .container .mem-container img {
 width: 300px;
 height: 300px;
-/* height: 300px; */
 overflow: hidden;
 }
 .container .mem-container span , .container .mem-container h4 {
@@ -101,7 +51,3 @@ margin-left: 15px;
 .name {
   margin: 5px 0 0 0;
 }
-.tit-cont{
-  background-color: #30808a;
-  border-radius: 100px;
-} 
