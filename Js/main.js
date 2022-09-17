@@ -5,7 +5,9 @@ let icons = document.querySelectorAll("svg:not(.arr)");
 let over = document.querySelector(".over");
 let remin = document.querySelector(".reminder");
 let quesBoxes = document.querySelectorAll(".ques-box");
-
+let riArr = document.querySelectorAll(".right-arrow");
+let inp = document.querySelector(".tem-num");
+let anses = document.querySelector(".anses");
 let smell = document.querySelector(".smell-box");
 let lastUpdate = document.querySelector(".statistics > p span");
 let covid = document.querySelectorAll(".statistics article h2 ");
@@ -21,14 +23,17 @@ let colors = [
   "#2196f3",
   "#d92626",
 ];
+//============================================================\\
 articles.forEach((ele, i) => {
   ele.style.backgroundColor = colors[i];
 });
+//============================================================\\
+
 // create arrow button in nav-bar
 arrow.onclick = () => {
   nav.classList.toggle("active");
-};
-//============================================\\
+//============================================================\\
+
 let rem = setTimeout(function () {
   over.style.display = "block";
   remin.style.display = "flex";
@@ -50,25 +55,18 @@ let rem = setTimeout(function () {
 //   anses.style.display ="grid";
 // }
 // })
-//============================================\\
-let riArr = document.querySelectorAll(".right-arrow");
-
-let anses = document.querySelector(".anses");
-let temp = document.querySelector(".tem-num");
-let tempAlert = document.querySelector(".tem-num + div");
+//============================================================\\
 for (let i = 0; i < riArr.length; i++) {
   riArr[i].onclick = function () {
-    if (temp.value.trim() == "") {
-      tempAlert.style.display = "block";
-    } else {
-      tempAlert.style.display = "none";
-      quesBoxes[i].style.display = "none";
-      if (quesBoxes[i].classList.contains("smell-box") === true) {
-        anses.style.display = "grid";
-      }
-      console.log(quesBoxes[i]);
-      quesBoxes[i + 1].style.display = "flex";
+    quesBoxes[i].style.display = "none";
+    if (quesBoxes[i].classList.contains("smell-box") === true) {
+      anses.style.display = "grid";
     }
+    console.log(quesBoxes[i]);
+    quesBoxes[i + 1].style.display = "flex";
+    // if(riArr.slice(-1).pop() === riArr[i]){
+
+    // }
   };
 }
 
@@ -76,7 +74,7 @@ for (let i = 0; i < riArr.length; i++) {
 // aft.onclick =function(){
 //   console.log("clicked")
 // }
-//============================================\\
+//============================================================\\
 fetch("https://disease.sh/v3/covid-19/all")
   .then((res) => res.json())
   .then((data) => {
@@ -92,3 +90,4 @@ fetch("https://disease.sh/v3/covid-19/all")
     lastUpdate.innerHTML = Date(data.updated);
     console.log(data);
   });
+//============================================================\\
