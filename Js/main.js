@@ -5,30 +5,30 @@ let icons = document.querySelectorAll("svg:not(.arr)");
 let over = document.querySelector(".over");
 let remin = document.querySelector(".reminder");
 let quesBoxes = document.querySelectorAll(".ques-box");
-console.log(quesBoxes);
-let riArr = document.querySelectorAll(".right-arrow");
-console.log(riArr);
-let inp = document.querySelector(".tem-num");
-let anses = document.querySelector(".anses");
+
 let smell = document.querySelector(".smell-box");
-console.log(anses);
-// let nav = document.querySelector('.nav-bar')
-// let nav = document.querySelector('.nav-bar')
+let lastUpdate = document.querySelector(".statistics > p span");
+let covid = document.querySelectorAll(".statistics article h2 ");
+let articles = document.querySelectorAll(".statistics article");
+let colors = [
+  "#4bcb64",
+  "#2196f3",
+  "#d92626",
+  "#4bcb64",
+  "#2196f3",
+  "#d92626",
+  "#4bcb64",
+  "#2196f3",
+  "#d92626",
+];
+articles.forEach((ele, i) => {
+  ele.style.backgroundColor = colors[i];
+});
 // create arrow button in nav-bar
 arrow.onclick = () => {
   nav.classList.toggle("active");
-  // taps.forEach((ele) => {
-  //   if (nav.classList.contains("active") === true) {
-  //     ele.style.display = "none";
-  //     icons.forEach((ico) => {
-  //       ico.style.marginBottom = "20px";
-  //     });
-  //   } else {
-  //     ele.style.display = "block";
-  //   }
-  // });
 };
-
+//============================================\\
 let rem = setTimeout(function () {
   over.style.display = "block";
   remin.style.display = "flex";
@@ -50,17 +50,25 @@ let rem = setTimeout(function () {
 //   anses.style.display ="grid";
 // }
 // })
+//============================================\\
+let riArr = document.querySelectorAll(".right-arrow");
+
+let anses = document.querySelector(".anses");
+let temp = document.querySelector(".tem-num");
+let tempAlert = document.querySelector(".tem-num + div");
 for (let i = 0; i < riArr.length; i++) {
   riArr[i].onclick = function () {
-    quesBoxes[i].style.display = "none";
-    if (quesBoxes[i].classList.contains("smell-box") === true) {
-      anses.style.display = "grid";
+    if (temp.value.trim() == "") {
+      tempAlert.style.display = "block";
+    } else {
+      tempAlert.style.display = "none";
+      quesBoxes[i].style.display = "none";
+      if (quesBoxes[i].classList.contains("smell-box") === true) {
+        anses.style.display = "grid";
+      }
+      console.log(quesBoxes[i]);
+      quesBoxes[i + 1].style.display = "flex";
     }
-    console.log(quesBoxes[i]);
-    quesBoxes[i + 1].style.display = "flex";
-    // if(riArr.slice(-1).pop() === riArr[i]){
-
-    // }
   };
 }
 
@@ -68,3 +76,19 @@ for (let i = 0; i < riArr.length; i++) {
 // aft.onclick =function(){
 //   console.log("clicked")
 // }
+//============================================\\
+fetch("https://disease.sh/v3/covid-19/all")
+  .then((res) => res.json())
+  .then((data) => {
+    covid[0].innerHTML = data.cases;
+    covid[1].innerHTML = data.recovered;
+    covid[2].innerHTML = data.deaths;
+    covid[3].innerHTML = data.todayCases;
+    covid[4].innerHTML = data.todayRecovered;
+    covid[5].innerHTML = data.todayDeaths;
+    covid[6].innerHTML = (data.casesPerOneMillion / 10000).toFixed(3) + "%";
+    covid[7].innerHTML = (data.recoveredPerOneMillion / 10000).toFixed(3) + "%";
+    covid[8].innerHTML = (data.deathsPerOneMillion / 10000).toFixed(3) + "%";
+    lastUpdate.innerHTML = Date(data.updated);
+    console.log(data);
+  });

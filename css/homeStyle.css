@@ -7,7 +7,11 @@ a {
   text-decoration: none;
 }
 .statistics {
+  position: relative;
+}
+.statistics section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -18,25 +22,28 @@ a {
   color: #fff;
   padding: 10px;
   font-weight: 600;
-  width: 230px;
+  width: 220px;
   min-width: 200px;
   max-width: 250px;
   border-radius: 10px;
 }
-.statistics article:nth-child(2) {
+/* .statistics article:nth-child(2) {
   background-color: #2196f3;
-}
-.statistics article:nth-child(3) {
-  background-color: #6ec6ff;
-}
+} */
+/* #d300000 */
 .statistics article h2 {
   text-align: right;
   color: #fff;
 
   font-weight: 900;
-  margin:40px 0 0 0;
+  margin: 40px 0 0 0;
 }
-main.container{
+main.container {
   margin-left: 250px;
   width: calc(100vw - 300px);
+}
+.statistics > p {
+  position: absolute;
+  right: 0;
+  opacity: 0.4;
 }
