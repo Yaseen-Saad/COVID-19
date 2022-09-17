@@ -43,7 +43,7 @@ main.container {
   width: calc(100vw - 300px);
 }
 .statistics > p {
-  position: absolute;
+  position: relative;
   right: 0;
   opacity: 0.4;
 }

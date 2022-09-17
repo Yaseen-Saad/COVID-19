@@ -32,17 +32,17 @@ articles.forEach((ele, i) => {
 // create arrow button in nav-bar
 arrow.onclick = () => {
   nav.classList.toggle("active");
-//============================================================\\
+  //============================================================\\
 
-let rem = setTimeout(function () {
-  over.style.display = "block";
-  remin.style.display = "flex";
-  over.onclick = function () {
-    over.style.display = "none";
-    remin.style.display = "none";
-  };
-}, 8000);
-
+  let rem = setTimeout(function () {
+    over.style.display = "block";
+    remin.style.display = "flex";
+    over.onclick = function () {
+      over.style.display = "none";
+      remin.style.display = "none";
+    };
+  }, 8000);
+};
 // riArr.forEach(aro => {
 //   aro.onclick = function(){
 //     console.log("clicked")
