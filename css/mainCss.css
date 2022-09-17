@@ -82,9 +82,8 @@ body {
 }
 .tit-cont {
   position: relative;
-  width: 600px;
+  width: 100%;
   margin: 20px auto;
-  left: 100px;
   background-color: var(--mainColor);
   display: flex;
   justify-content: space-between;
@@ -151,7 +150,7 @@ h4 {
 }
 .main-taps svg {
   fill: white;
-  margin-right: 15px;
+  margin: 0;
   cursor: pointer;
 }
 .main-taps h3 {
@@ -197,15 +196,12 @@ h4 {
 .nav-bar.active .main-taps {
   margin-top: 0;
 }
-.nav-bar.active .main-taps > * {
-  width: 300%;
-}
-.nav-bar.active .main-taps > * :first-child {
-  margin: 0 130px;
-}
 .nav-bar.active .main-taps > * h3 {
   display: none;
 }
 .nav-bar a {
   color: white;
+}
+.nav-bar.active .main-taps svg{
+  margin:0 0 20px 130px;
 }

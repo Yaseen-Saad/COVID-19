@@ -17,6 +17,16 @@ console.log(anses);
 // create arrow button in nav-bar
 arrow.onclick = () => {
   nav.classList.toggle("active");
+  // taps.forEach((ele) => {
+  //   if (nav.classList.contains("active") === true) {
+  //     ele.style.display = "none";
+  //     icons.forEach((ico) => {
+  //       ico.style.marginBottom = "20px";
+  //     });
+  //   } else {
+  //     ele.style.display = "block";
+  //   }
+  // });
 };
 
 let rem = setTimeout(function () {
