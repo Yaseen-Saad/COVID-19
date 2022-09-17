@@ -33,7 +33,7 @@ articles.forEach((ele, i) => {
 arrow.onclick = () => {
   nav.classList.toggle("active");
   //============================================================\\
-
+}
   let rem = setTimeout(function () {
     over.style.display = "block";
     remin.style.display = "flex";
