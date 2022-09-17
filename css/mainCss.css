@@ -207,3 +207,37 @@ h4 {
 .nav-bar.active .main-taps svg {
   margin: 0 0 20px 130px;
 }
+@media (max-width: 798px) {
+  .tit-cont {
+    display: none;
+  }
+  .container {
+    margin-left: auto !important;
+    margin-top: 100px;
+  }
+  .nav-bar {
+    top: 0 !important;
+    left: 50% !important;
+    width: 600px !important;
+    height: 100px !important;
+    max-width: 100%;
+    min-width: 320px;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .main-taps {
+    margin-top: 50px !important;
+    flex-direction: row !important;
+  }
+  .main-taps > * {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-taps > * svg {
+    margin: 0 !important;
+  }
+  .nav-bar .arrow {
+    display: none;
+  }
+}
