@@ -42,7 +42,6 @@ arrow.onclick = () => {
       remin.style.display = "none";
     };
   }, 8000);
-};
 // riArr.forEach(aro => {
 //   aro.onclick = function(){
 //     console.log("clicked")
