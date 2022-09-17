@@ -2,9 +2,7 @@
 p{
   color: rgb(165, 165, 165);
 }
-body{
-  background-image: linear-gradient(to bottom , #EFDCD6, #7cadd1);
-}
+
 *{
   font-family: 'Cairo', sans-serif;
 }

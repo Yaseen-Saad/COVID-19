@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-image: linear-gradient(to bottom, #efdcd6, #7cadd1);
+  min-height: 100vh;
 }
 * {
   box-sizing: border-box;
@@ -202,6 +204,6 @@ h4 {
 .nav-bar a {
   color: white;
 }
-.nav-bar.active .main-taps svg{
-  margin:0 0 20px 130px;
+.nav-bar.active .main-taps svg {
+  margin: 0 0 20px 130px;
 }
