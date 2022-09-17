@@ -1,20 +1,13 @@
-<<<<<<< HEAD
 
 p{
   color: rgb(165, 165, 165);
-=======
+}
 body{
   background-image: linear-gradient(to bottom , #EFDCD6, #7cadd1);
 }
 *{
   font-family: 'Cairo', sans-serif;
 }
-p{
-  color: rgb(39, 87, 46);
-  
->>>>>>> 0b2f60ff1b07c90def335cfc8fe80b700998604c
-}
-
 .container{
   position: relative;
   width: 800px;
@@ -63,8 +56,6 @@ margin-left: 15px;
 .name {
   margin: 5px 0 0 0;
 }
-<<<<<<< HEAD
-=======
 .tit-cont{
   background-color: #30808a;
   border-radius: 100px;
@@ -75,4 +66,3 @@ margin-left: 15px;
 .mem-container{
   transition: 0.5s;
 }
->>>>>>> 0b2f60ff1b07c90def335cfc8fe80b700998604c
