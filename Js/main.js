@@ -23,6 +23,11 @@ let colors = [
   "#2196f3",
   "#d92626",
 ];
+let lis = document.querySelectorAll(".rep-taps li");
+let lisArray = Array.from(lis);
+let divs = document.querySelectorAll(".content > div");
+let divsArray = Array.from(divs);
+
 //============================================================\\
 articles.forEach((ele, i) => {
   ele.style.backgroundColor = colors[i];
@@ -90,3 +95,18 @@ fetch("https://disease.sh/v3/covid-19/all")
     console.log(data);
   });
 //============================================================\\
+
+
+// reports taps
+lisArray.forEach((ele) => {
+  ele.addEventListener("click" , function(e){
+lisArray.forEach((ele) => {
+  ele.classList.remove("rep-active");
+});
+e.currentTarget.classList.add("rep-active");
+divsArray.forEach((div) => {
+  div.style.display= "none"
+});
+document.querySelector(e.currentTarget.dataset.cont).style.display ="block"
+  })
+})
